@@ -14,6 +14,7 @@
 --blue--violet:#0a0dad;
 --bluish-gray: #abb8c3;
 --bs-primary-text-emphasis: #052c65;
+--lighter-blue:#E9F0FE;
 }
   
 body{
@@ -511,6 +512,7 @@ background: transparent;
 }
 .forth__section {
 text-align: center;
+padding-bottom: 5rem;
 }
 .forth__section .container p {
   text-align: center;
@@ -559,6 +561,154 @@ height: 30vh;
     text-align: start;
     width: 100%;
   }
+  .fifth__section{
+    height: 70vh;
+  }
+  .fifth__section .container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    height: 100%;
+    gap: 2rem;
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--bluish-gray) ;
+  }
+  .fifth__section .container p{
+color: var(--light-color-text);
+
+  }
+  .fifth__section .container .right{
+   display: grid;
+  }
+  .fifth__section .container .right h2{
+    font-size:1.2rem ;
+  }
+  .fifth__section .container .left p{
+    width: 90%;
+
+  }
+  .fifth__section .container .right .article img{
+    width: 10rem;
+    height: 8rem;
+  }
+  .fifth__section .container .right .article{
+    display: flex;
+    gap: 4.5rem;
+  }
+  
+  .sixth__section .container{
+    height: 100%;
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+.sixth__section h1{
+  text-align: center;
+}
+
+.sixth__section .image img{
+  width: 100%;
+}
+.seventh__section{
+  background:  #E9F0FE;;
+}
+.seventh__section h1{
+  text-align: center;
+}
+.seventh__section .container{
+  padding: 4rem 0;
+}
+.seventh__section .container .articles{
+display:grid ;
+gap: 2rem;
+grid-template-columns: 1fr 1fr;
+}
+.seventh__section .container .articles article{
+  background-color: #fff;
+  display: flex;
+  align-items: start;
+  margin-bottom: 2rem;
+  height:55vh;
+  gap: 1rem;
+  padding: 4rem 2rem;
+}
+.seventh__section .container .articles article .image{
+  background:var(--lighter-blue);
+  padding: 1rem 1.5rem;
+  border-radius: 5rem;
+}
+.seventh__section .container .articles article h4{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--dark--color);
+}
+.seventh__section .container .articles article p{
+  font-size: 1rem;
+}
+.seventh__section .container .articles article ul{
+ margin-top: 2rem;
+}
+.seventh__section .container .articles article ul li{
+  list-style: disc;
+  margin-left: 2rem;
+}
+.seventh__section .container .articles p{
+  font-size: .8rem;
+}
+
+.eight__section .container .top{
+text-align: center;
+}
+.eight__section .container .top p{
+  width: 65%;
+  margin: 0 auto;
+}
+.eight__section .container .bottom .your-class{
+  overflow-x: hiddn;
+  display: flex;
+  gap: 2rem;
+}
+.eight__section .container .bottom .your-class div{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 20vw;
+  height: 50vh;
+  color: var(--white);
+ 
+ 
+}
+.eight__section .container .bottom .your-class div,span{
+  font-size:1.4rem ;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+.eight__section .container .bottom .your-class div .image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: .8rem;
+
+ 
+
+}
+.eight__section .container .bottom .your-class div .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: .8rem;
+  opacity: .9;
+}
+.eight__section .container .bottom .your-class div span{
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  border: .2rem solid rgba(255, 255, 255, 0.149);
+
+
+}
+.eight__section .container .bottom .your-class div {
+
+}
+
+
 
 
 
