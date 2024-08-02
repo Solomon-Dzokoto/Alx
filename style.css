@@ -99,6 +99,9 @@ nav .nav__container{
   padding: 0 1rem;
   grid-template-columns: 1fr 6rem;
 }
+.open{
+  display: none;
+}
 nav .nav__container .left{
   display: flex;
   justify-content: space-between;
@@ -109,6 +112,9 @@ nav .nav__container .left{
 }
 nav .nav__container .left .logo{
   height: 2.5rem;
+}
+.close{
+  display: none;
 }
 nav .nav__container .left button{
   padding: .5rem 1rem;
@@ -255,6 +261,9 @@ display: block;
   padding-left: 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+.sign{
+  display: none;
 }
 .dropdown__toggle .explore__programmes .left{
   display: grid;
@@ -692,7 +701,7 @@ text-align: center;
   width: 90vw;
   align-items: center;
 }
-.eight__section .container .bottom .your-class .swiper-slide{
+.your-class .swiper-slide{
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -740,7 +749,7 @@ gap: 1rem;
 align-items: center;
 
 }
-.eight__section .container .bottom .more__info{
+.more__info{
 position: absolute;
 background: var(--slide-bc);
 left: 0;
@@ -788,7 +797,7 @@ padding-top: 2rem;
 text-align: center;
 margin-top: 5rem;
  }
- .ninth__section .container .Faqs .questions__answers{
+ .questions__answers{
  background: var(--white);
  width: 85%;
  margin: 1rem auto;
@@ -805,7 +814,7 @@ margin-top: 5rem;
  .ninth__section .container .Faqs .questions__answers .question p,span{
  color: var(--bs-primary-text-emphasis);
 }
-.ninth__section .container .Faqs .questions__answers .answer{
+.questions__answers .answer{
 margin-top: 1rem;
 display: none;
 }
@@ -949,6 +958,9 @@ body{
 .container{
   width: 80%;
 }
+.open{
+  display: block;
+}
 nav .nav__container {
   display: flex;
   justify-content: space-between;
@@ -968,6 +980,102 @@ nav .nav__container .right{
   align-items: center;
   gap: 2rem;
 }
+
+nav .nav__container .left button{
+  position: fixed;
+ z-index: 2000;
+ font-size: 1rem;
+ padding: .8rem 5rem;
+ bottom: 2rem;
+ margin: 0 auto;
+ left: 20%;
+ background-color: var(--color--green);
+ color: #002B56;
+ border: none;
+ transition: var(--transition-text);
+}
+nav .nav__container .left button:hover{
+  background-color: var(--yellow-color);
+}
+nav .nav__container .left .nav__items {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 0;
+  width: 100vw;
+ transform-origin: top to bottom;
+}
+nav .nav__container .left .nav__items a{
+  font-size: 1rem;
+  color:#002B56;
+}
+nav .nav__container .left .nav__items .nav__links{
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid var(--light--color-gray) ;
+  width: 94vw;
+  display: flex;
+  cursor: pointer;
+}
+nav .nav__container .left .nav__items .nav__links:hover{
+  background-color: #029de013;
+}
+nav .nav__container .left .nav__items .nav__links:hover a{
+ color:#002B56;
+}
+.ham{
+  position: fixed;
+  top: 3.5rem;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+
+}
+nav .nav__container .left button{
+left: 35%;
+}
+.new{
+  position: absolute;
+  background-color:var(--yellow-color);
+  left: -10%;    bottom: 10rem;
+  width: fit-content;
+  height: fit-content;
+  font-size: .6rem;
+  padding: .1rem .4rem;
+}
+
+nav .nav__container .left .ham .dropdown-toggle .dropdown .dropdown-menu{
+  display: none;
+}
+nav .nav__container .left  .ham .dropdown__toggle .explore__programmes{
+  display: none;
+}
+.sign{
+  position: fixed;
+  bottom: 7rem;
+  font-size: 1.2rem;
+  color: #002B56;
+  z-index: 3000;
+  text-align: center;
+ margin-left: 18%;
+}
+.close i{
+  font-size: 2rem;
+}
+.close{
+  cursor: pointer;
+  position: fixed;
+  z-index: 2250;
+  right: 1.5rem;
+  top: 3.5rem;
+}
+
+
+
 
 .first__section {
   width: 100%;
@@ -1101,6 +1209,9 @@ margin-top: 4rem;
   width: 100%;
   margin: 0 auto;
 }
+.open{
+  display: block;
+}
 .third__section{
 height: 150vh;
 }
@@ -1198,12 +1309,12 @@ padding-bottom: 2rem;
     background-color: var(--yellow-color);
   }
   nav .nav__container .left .nav__items {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-   align-items: start;
+    align-items: start;
     gap: 0;
     width: 100vw;
+   transform-origin: top to bottom;
   }
   nav .nav__container .left .nav__items a{
     font-size: 1rem;
@@ -1211,11 +1322,11 @@ padding-bottom: 2rem;
   }
   nav .nav__container .left .nav__items .nav__links{
     padding: 1rem;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom:1px solid var(--light--color-gray) ;
     width: 94vw;
+    display: flex;
     cursor: pointer;
   }
   nav .nav__container .left .nav__items .nav__links:hover{
@@ -1231,19 +1342,19 @@ padding-bottom: 2rem;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
     z-index: 1000;
-
+  
   }
   nav .nav__container .left button{
- display: flex;
+ display: none;
  align-items: center;
  justify-content: flex-end;
   }
   .new{
     position: absolute;
     background-color:var(--yellow-color);
-   left: -10%;    bottom: 10rem;
+    left: -10%;    bottom: 10rem;
     width: fit-content;
     height: fit-content;
     font-size: .6rem;
@@ -1259,11 +1370,21 @@ padding-bottom: 2rem;
   .sign{
     position: fixed;
     bottom: 7rem;
-  font-size: 1.2rem;
-  color: #002B56;
+    font-size: 1.2rem;
+    color: #002B56;
     z-index: 3000;
-  text-align: center;
-  left: 13%;
+    text-align: center;
+    left: 13%;
+  }
+  .close i{
+    font-size: 2rem;
+  }
+  .close{
+    cursor: pointer;
+    position: fixed;
+    z-index: 2250;
+    right: 1.5rem;
+    top: 3.5rem;
   }
 }
 

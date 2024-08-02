@@ -2,7 +2,26 @@ const arrow=document.querySelector('.arrow');
 const country=document.querySelector('.select__country .countries .country');
 const application=document.querySelector('.apply');
 const cancel=document.querySelector('.cancel');
+const openNav=document.querySelector('.open');
+const navItems=document.querySelector('.nav__items');
+const button=document.querySelector('.btn');
+const sign=document.querySelector('.sign');
+const closeNav=document.querySelector('.close');
 
+openNav.addEventListener('click',()=>{
+  navItems.style.display="flex";
+  sign.style.display="block";
+  button.style.display="flex";
+  closeNav.style.display="block";
+})
+closeNav.addEventListener('click',()=>{
+  navItems.style.display="none";
+  sign.style.display="none";
+  button.style.display="none";
+  closeNav.style.display="none";
+  openNav.style.display="block";
+}
+)
 cancel.addEventListener('click',()=>{
   application.style.display="none"
 });
@@ -55,46 +74,14 @@ document
     ]);
   });
 
-/*
-  const swiperSlider=document.querySelectorAll('.swiper-slider');
-
-  const questionAnswers = document.querySelectorAll('.ninth__section .container .Faqs .questions__answers'); // Select all question elements
-  const answers = document.querySelectorAll('.ninth__section .container .Faqs .questions__answers .answer'); // Select all answer elements
-  
-  questionAnswers.forEach(questionAnswer => { 
-    questionAnswer.addEventListener('click', () => {
-      const answerId = questionAnswer.dataset.target; 
-      const answerTarget = document.getElementById(answerId); // Find the answer element
-  
-      if (answerTarget.style.display === 'block') {
-        answerTarget.style.display = "none"; // Hide the answer if it's visible
-      } else {
-        // Hide all answers, then show the target
-        answers.forEach(answer => answer.style.display = "none"); 
-        answerTarget.style.display = "block"; 
-      }
-    });
-  });
-
-  const questionsAnswers = document.querySelectorAll(".ninth__section .container .Faqs .questions__answers ");
-
-questionsAnswers.forEach(questionAnswer => {
-  questionAnswer.addEventListener("click", () => {
-    questionAnswer.classList.toggle("active");
-  });
-});
-  
-*/
-
-const questions= document.querySelectorAll('.ninth__section .container .Faqs .questions__answers');
-const answers = document.querySelectorAll('.ninth__section .container .Faqs .questions__answers .answer'); 
+const questions= document.querySelectorAll('.questions__answers');
+const answers = document.querySelectorAll('.questions__answers .answer'); 
 
 questions.forEach(question => {
   question.addEventListener('click', () => {
     const targetAnswerId = question.dataset.target; // Get the answer ID from 'data-focus'
     const targetAnswer = document.getElementById(targetAnswerId); // Get the answer element
 
-    // Toggle display of the answer and update arrow icons
     if (targetAnswer.style.display === 'flex') { 
       targetAnswer.style.display = 'none';
     } else {
@@ -103,15 +90,14 @@ questions.forEach(question => {
   });
 });
 
-const swiperSlides= document.querySelectorAll('.swiper-slide');
+const swiperSlides= document.querySelectorAll('.your-class .swiper-slide');
 const moreInfo= document.querySelectorAll('.more__info'); 
 
 swiperSlides.forEach(swiperSlide=> {
   swiperSlide.addEventListener('click', () => {
-    const swiperFocusId = swiperSlide.dataset.focus; // Get the answer ID from 'data-focus'
-    const swiperFocus = document.getElementById(swiperFocusId ); // Get the answer element
+    const swiperFocusId = swiperSlide.dataset.focus; 
+    const swiperFocus = document.getElementById(swiperFocusId ); // 
 
-    // Toggle display of the answer and update arrow icons
     if (swiperFocus.style.display === 'flex') { 
       moreInfo.style.display = 'none';
     } else {
